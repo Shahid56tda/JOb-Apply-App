@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".RegisterActivity">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img"
+        android:layout_marginTop="32dp"
+        android:layout_width="105dp"
+        android:layout_height="105dp"
+        app:civ_border_width="2dp"
+        android:src="@drawable/ic_profile"
+        app:civ_border_color="#2E7147"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Put Your All Detail Here"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/img"
+        app:layout_constraintStart_toStartOf="@+id/img"
+        app:layout_constraintTop_toBottomOf="@id/img" />
+
+    <EditText
+        android:id="@+id/fullNameEt"
+        android:layout_width="match_parent"
+        android:drawableStart="@drawable/ic_profile"
+        android:drawablePadding="12dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/et_shape_1"
+        android:gravity="center_vertical"
+        android:hint="Full Name"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textSize="16sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/t1"
+        app:layout_constraintStart_toStartOf="@+id/t1"
+        app:layout_constraintTop_toBottomOf="@+id/t1" />
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="55dp"
+        android:drawableStart="@drawable/ic_email"
+        android:drawablePadding="12dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/et_shape_1"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/fullNameEt"
+        app:layout_constraintStart_toStartOf="@+id/fullNameEt"
+        app:layout_constraintTop_toBottomOf="@+id/fullNameEt"/>
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:drawableStart="@drawable/ic_mobile"
+        android:drawablePadding="12dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/et_shape_1"
+        android:hint="Phone"
+        android:inputType="phone"
+        android:maxLines="1"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/email"
+        app:layout_constraintStart_toStartOf="@+id/email"
+        app:layout_constraintTop_toBottomOf="@+id/email"/>
+    <EditText
+        android:id="@+id/jobtitle_company"
+        android:layout_width="match_parent"
+
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:drawableStart="@drawable/jobtitle"
+        android:drawablePadding="12dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/et_shape_1"
+        android:hint="Job title and Company Name"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/phone"
+        app:layout_constraintStart_toStartOf="@+id/phone"
+        app:layout_constraintTop_toBottomOf="@+id/phone"/>
+    <EditText
+        android:id="@+id/dob"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/et_shape_1"
+        android:hint="Date Of Birth"
+        android:drawableStart="@drawable/ic_calendar"
+        android:drawablePadding="12dp"
+        android:maxLines="1"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textSize="16sp"
+
+        android:focusable="false"
+        app:layout_constraintEnd_toEndOf="@+id/jobtitle_company"
+        app:layout_constraintStart_toStartOf="@+id/jobtitle_company"
+        app:layout_constraintTop_toBottomOf="@+id/jobtitle_company"/>
+
+    <LinearLayout
+        android:id="@+id/l"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/et_shape_1"
+
+        android:maxLines="1"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/dob"
+        app:layout_constraintStart_toStartOf="@+id/dob"
+        app:layout_constraintTop_toBottomOf="@+id/dob">
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gender"
+
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:textSize="18dp"
+                android:layout_marginEnd="22dp"
+                android:id="@+id/m"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"
+                android:textSize="18sp"
+                android:id="@+id/f"/>
+        </RadioGroup>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/l2"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/et_shape_1"
+        android:maxLines="1"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/l"
+        app:layout_constraintStart_toStartOf="@+id/l"
+        app:layout_constraintTop_toBottomOf="@+id/l">
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gjob"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="job seeker"
+                android:textSize="18sp"
+                android:layout_marginEnd="22dp"
+                android:id="@+id/seeker"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hiring Job"
+                android:textSize="18sp"
+                android:id="@+id/hiring"/>
+        </RadioGroup>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/l3"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="110dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/et_shape_1"
+        android:maxLines="1"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/l2"
+        app:layout_constraintStart_toStartOf="@+id/l2"
+        app:layout_constraintTop_toBottomOf="@+id/l2">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"
+            android:text="Select your Education Background"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:id="@+id/edu"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tedu"
+            android:layout_marginTop="11dp"
+
+            android:textSize="22dp"
+            android:text="null"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/l4"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="110dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/et_shape_1"
+        android:maxLines="1"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/l3"
+        app:layout_constraintStart_toStartOf="@+id/l3"
+        app:layout_constraintTop_toBottomOf="@+id/l3">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"
+            android:text="Year of Experince"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:id="@+id/yop"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tyop"
+            android:layout_marginTop="11dp"
+
+            android:textSize="22dp"
+            android:text="null"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/l5"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="110dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/et_shape_1"
+        android:maxLines="1"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/l4"
+        app:layout_constraintStart_toStartOf="@+id/l4"
+        app:layout_constraintTop_toBottomOf="@+id/l4">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"
+            android:text="Select desired salary"/>
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:id="@+id/salary"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tsalary"
+            android:layout_marginTop="11dp"
+
+            android:textSize="22dp"
+            android:text="null"/>
+    </LinearLayout>
+    <EditText
+        android:id="@+id/skill"
+        android:layout_width="match_parent"
+
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:drawableStart="@drawable/skill"
+        android:drawablePadding="12dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/et_shape_1"
+        android:hint="Skill and Experice"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/l5"
+        app:layout_constraintStart_toStartOf="@+id/l5"
+        app:layout_constraintTop_toBottomOf="@+id/l5"/>
+    <EditText
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:drawableStart="@drawable/location"
+        android:drawablePadding="12dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/et_shape_1"
+        android:hint="Location"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/skill"
+        app:layout_constraintStart_toStartOf="@+id/skill"
+        app:layout_constraintTop_toBottomOf="@+id/skill"/>
+    <EditText
+        android:id="@+id/summary"
+        android:layout_width="match_parent"
+
+        android:layout_height="200dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_vertical"
+        android:drawableStart="@drawable/sumary"
+        android:drawablePadding="12dp"
+        android:background="@drawable/et_shape_1"
+        android:hint="your Professinoal Summary"
+        android:inputType="text"
+        android:maxLines="1"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/location"
+        app:layout_constraintStart_toStartOf="@+id/location"
+        app:layout_constraintTop_toBottomOf="@+id/location"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/btn_shape_2"
+        android:text="Register"
+        android:gravity="center"
+        android:textSize="22dp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/summary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
